@@ -1,0 +1,49 @@
+.label{
+margin-bottom: 4px;
+font-size: 16px;
+line-height: 20px;
+display: block;
+}
+.wrapInput{
+    border:solid  1px rgb(36, 10, 153);
+    width: 424px;
+    border-radius: 8px;
+    padding: 16px;
+    padding-right: 48px;
+    position: relative;
+}
+.input{
+    font-size: 20px;
+    line-height: 24px;
+    border:none;
+    background:none;
+    outline:none;
+    padding:0;
+    width: 100%;
+    height: 100%; 
+      
+}
+
+.logo{
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8B8C8E;
+    width: 24px;
+    height: 24px;   
+}
+
+.input::placeholder{
+color: #6F6F6F;
+}
+.outerIcon{
+  
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8B8C8E;
+    width: 24px;
+    height: 24px;   
+}
