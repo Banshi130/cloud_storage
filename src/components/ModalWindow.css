@@ -8,8 +8,9 @@
 .ModalWindow_wrap{
     display: flex;
     flex-flow: column;
+    height: 100%;
     width: 100%;
-    padding: 288px;
+    /* padding: 288px; */
    border-radius: 8px;
     background-color: blue;
     box-sizing: border-box;
