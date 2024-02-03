@@ -7,12 +7,9 @@ return(
         <div className="ModalWindow_substrate"></div>
         <div className="ModalWindow_wrap">  
             {/* {Children} */}
-            <BaseInput/>
-            <BaseInput/>
-            <BaseInput/>
-            <BaseInput/>
-            <BaseInput/>
-            <button>fsdfsdfsd</button>
+            <BaseInput />
+
+
         </div>
     </div>
 )
