@@ -1,10 +1,13 @@
 import BaseInput from './components/BaseInput';
-
+import ModalWindow from './components/ModalWindow'
 
 function App() {
   return (
     <div className="App">
-      <BaseInput/>
+      <div className='check'>  
+          <ModalWindow/></div>
+      {/* <BaseInput/> */}
+
     </div>
   );
 }

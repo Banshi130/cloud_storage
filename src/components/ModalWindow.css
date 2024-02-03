@@ -1,0 +1,14 @@
+.ModalWindow{
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+.ModalWindow_wrap{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding: 288px;
+   border-radius: 8px;
+    background-color: blue;
+    box-sizing: border-box;
+}

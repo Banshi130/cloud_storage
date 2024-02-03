@@ -1,18 +1,18 @@
-.label{
+.BaseInput_label{
 margin-bottom: 4px;
 font-size: 16px;
 line-height: 20px;
 display: block;
 }
-.wrapInput{
+.BaseInput_wrapInput{
     border:solid  1px rgb(36, 10, 153);
-    width: 424px;
+    background-color: white;
     border-radius: 8px;
     padding: 16px;
     padding-right: 48px;
     position: relative;
 }
-.input{
+.BaseInput_input{
     font-size: 20px;
     line-height: 24px;
     border:none;
@@ -24,7 +24,7 @@ display: block;
       
 }
 
-.logo{
+.BaseInput_SufixIcon{
     position: absolute;
     right: 16px;
     top: 50%;
@@ -34,10 +34,10 @@ display: block;
     height: 24px;   
 }
 
-.input::placeholder{
+.BaseInput_input::placeholder{
 color: #6F6F6F;
 }
-.outerIcon{
+.BaseInput_OuterIcon{
   
     position: absolute;
     right: -40px;
