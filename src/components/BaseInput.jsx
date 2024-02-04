@@ -10,6 +10,7 @@ return(
     <label htmlFor="" className="BaseInput_label">{leb}</label>
    <div className="BaseInput_wrapInput"> 
         <input className="BaseInput_input" type="text" placeholder="Пароль"/>
+        {}
         <VisIcon className="BaseInput_SufixIcon"/>
         <HintIcon className="BaseInput_OuterIcon"/>
         {/* //здесь должна быть иконнка визуально нутри инпута */}
