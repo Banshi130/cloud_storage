@@ -1,12 +1,13 @@
 import React from "react"
-import { ReactComponent as BaseButton } from "/Users/jemho/Documents/html/cloud/cloud_storage/src/icon/buttonicons.svg";
+// import { ReactComponent as BaseButton } from "/Users/jemho/Documents/html/cloud/cloud_storage/src/icon/button.svg";
 import './BaseButton.css';
 
 export default ()=>{
   return (
+    <div className="BaseButtonWrap">
     <button className="BaseButton">
-      <BaseButton />
     </button>
+    </div>
   );
 };
 
