@@ -7,11 +7,17 @@ function App() {
   return (
     <div className="App">
       <div className='check'>  
-          <ModalWindow/></div>
-      <BaseInput onInput={(e)=>{console.log(e, "onInput")}}   onBlur={(e)=>{console.log(e, "onBlur")}} 
-      SufixIcon={VisIcon}
+          <ModalWindow>
+          <BaseInput onInput={(e)=>{console.log(e, "onInput")}}
+        onBlur={(e)=>{console.log(e, "onBlur")}} 
+         SufixIcon={VisIcon}
       />
-      <Example/>
+          </ModalWindow>
+          
+          
+          </div>
+
+      
     </div>
   );
 }
