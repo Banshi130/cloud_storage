@@ -2,6 +2,10 @@ import './App.css';
 import TemplateButton from './components/BaseButton'
 import {ReactComponent as IconLogin} from './icon/buttonLogin.svg';
 
+function handleClick() {
+      alert('You clicked me!');
+      
+  }
 
 
 function App() {
@@ -13,7 +17,7 @@ function App() {
       <TemplateButton typeStyle="dark">
         Зарегистрироваться
       </TemplateButton>
-      <TemplateButton typeStyle="dark">
+      <TemplateButton typeStyle="dark" onClick={handleClick}>
         Сменить пароль
       </TemplateButton>
     </div>
