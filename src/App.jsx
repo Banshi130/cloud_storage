@@ -1,11 +1,13 @@
 import BaseInput from './components/BaseInput';
 import './App.css';
-import BaseButton from './components/BaseButton'
+import TemplateButton from './components/BaseButton'
+
+
 
 function App() {
   return (
     <div className="App">
-      <BaseButton />
+      <TemplateButton value="Зарегистрироваться"/>
     </div>
   );
 }
