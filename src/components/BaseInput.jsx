@@ -1,20 +1,37 @@
 //общее окно инпута 
 import React from "react";
 import './BaseInput.css'
-import { ReactComponent as VisIcon } from "../icon/IconPassword.svg";
-import { ReactComponent as HintIcon } from "../icon/IconHint.svg";
-export default ({leb})=>{
-console.log(leb);
+
+import cn from "classnames"; 
+export default (props)=>{
+const SufixIcon =props.SufixIcon;
+const HintIcon =props.HintIcon;
+
 return(
-    <div className="BaseInput">
-    <label htmlFor="" className="BaseInput_label">{leb}</label>
+    <div className={cn("BaseInput",props.className)}>
+        
+   {props.label && <label  className="BaseInput_label">{props.label}</label>}
    <div className="BaseInput_wrapInput"> 
-        <input className="BaseInput_input" type="text" placeholder="Пароль"/>
-        {}
-        <VisIcon className="BaseInput_SufixIcon"/>
-        <HintIcon className="BaseInput_OuterIcon"/>
+        <input  onInput={(e)=>{props.onInput&&props.onInput(e)}} onBlur={(e)=>{props.onBlur&&props.onBlur(e)}}  value={props.value} name={props.name} type={props.type} className="BaseInput_input"  placeholder={props.placeholder}/>
+       {SufixIcon&& <SufixIcon className="BaseInput_SufixIcon"/>}
+        {HintIcon&& <HintIcon className="BaseInput_OuterIcon"/>}
         {/* //здесь должна быть иконнка визуально нутри инпута */}
     </div>
 {/* // вннешняя иконка которая за инпутом. */}
 </div>)
 }
+//label : string
+//SufixIcon component
+//HintIcon component
+//value : string
+//placeholder  : string
+//type : string
+//name : string
+//onInput : function
+//onBlur  : function
+//isError : bolean 
+//helperText : string
+//className :string {на реакт компонент ннельзя навесить более одного класса нннужнна библа class names}
+
+
+/// MB  нужен тайп скрипт на прожкт нужно погуглить как добавить и что вообще.

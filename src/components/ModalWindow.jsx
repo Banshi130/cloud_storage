@@ -8,7 +8,7 @@ return(
         <div className="ModalWindow_substrate"></div>
         <div className="ModalWindow_wrap">  
             {/* {Children} */}
-            <BaseInput leb={'Пароль'} />
+            {/* <BaseInput leb={'Пароль'} /> */}
             
 
         </div>
