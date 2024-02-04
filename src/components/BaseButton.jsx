@@ -1,17 +1,21 @@
-import React from "react"
-import { useState } from "react";
-// import { ReactComponent as BaseButton } from "/Users/jemho/Documents/html/cloud/cloud_storage/src/icon/button.svg";
-import './BaseButton.css';
-import classNames from "classnames";
+import React from 'react'
+import './BaseButton.css'
+import cn from 'classnames'
 
-export default (props)=>{
-const registrationButton = props.registrationButton;
-const resetPasswordButton = props.resetPasswordButton;
+export default (props) => {
   return (
-    <div className="TemplateButton">
-      <button className="baseButton"></button>
-      <button className="textButton" >{props.value}</button>
-    </div>
-    
-  );
-};
+    <button type={props.type} 
+    onClick={(e) => props.onClick && props.onClick(e)} // Обрабатываем событие нажатия
+    className={cn('BaseButton', 
+    props.typeStyle === 'dark' ? 'BaseButton--dark' : 'BaseButton--default', // Получаем стиль кнопки
+    props.className,
+    )}>
+      {props.children}
+    </button>
+  )
+}
+
+// typeStyle
+// type
+// onClick
+// children
