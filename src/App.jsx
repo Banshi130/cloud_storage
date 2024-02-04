@@ -1,7 +1,6 @@
-import BaseInput from './components/BaseInput';
 import './App.css';
 import TemplateButton from './components/BaseButton'
-import {ReactComponent as IconLogin} from './icon/button.svg';
+import {ReactComponent as IconLogin} from './icon/buttonLogin.svg';
 
 
 
