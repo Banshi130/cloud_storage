@@ -19,8 +19,10 @@
   }
   
   .ModalWindow_wrapContent {
-    background-color: blue;
+    background-color: #0072FF;
     padding: 20px;
     position: relative;
-    border-radius: 8px;
+    border-radius: 11px;
+    width: 1000px;
+    height: 500px;
   }
