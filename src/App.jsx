@@ -7,7 +7,7 @@ function App() {
       <div className='check'>  
           <ModalWindow/></div>
       {/* <BaseInput/> */}
-
+    
     </div>
   );
 }
