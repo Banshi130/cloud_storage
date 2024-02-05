@@ -11,11 +11,9 @@ function App() {
     <div className="App">
       <div className='check'>  
           <ModalWindow>
-          <BaseInput onInput={(e)=>{console.log(e, "onInput")}}
-          onBlur={(e)=>{console.log(e, "onBlur")}} 
-          SufixIcon={VisIcon}/>
+          <LoginForm /> 
           </ModalWindow> 
-          <LoginForm />            
+                     
       </div>
     </div>
   );

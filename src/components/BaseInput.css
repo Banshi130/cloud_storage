@@ -5,7 +5,6 @@
     display: block;
 }
 .BaseInput_wrapInput{
-    border:solid  1px rgb(36, 10, 153);
     background-color: white;
     border-radius: 8px;
     padding: 16px;

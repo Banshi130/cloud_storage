@@ -9,7 +9,7 @@
     left: 0;
   }
   
-  .ModalWindow_substrate {
+.ModalWindow_substrate {
     width: 100%;
     height: 100%;
     background: #f5f8ff;
@@ -18,11 +18,12 @@
     left: 0;
   }
   
-  .ModalWindow_wrapContent {
+.ModalWindow_wrapContent {
     background-color: #0072FF;
-    padding: 20px;
     position: relative;
+    padding: 150px 288px 35px;
     border-radius: 11px;
-    width: 1000px;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
