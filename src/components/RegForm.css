@@ -1,0 +1,27 @@
+.RegForm_Name{
+    font-size: 48px;
+    position: absolute;
+    top: 48px;
+    color: white;
+}
+
+.RegForm_ButtonSetting{
+    width: 424px;
+}
+
+.BaseInput{
+    width: 424px;
+    margin-top: 24px;
+}
+
+.BaseInput::first-line{
+    color:  white;
+}
+.BaseButton{
+    margin-top: 58px;
+}
+
+.RegForm_currentMargin{
+    margin-top: 52px;
+}
+
