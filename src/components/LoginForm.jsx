@@ -4,8 +4,8 @@ import BaseInput from "./BaseInput";
 import BaseButton from "./BaseButton"
 import { ReactComponent as Logo } from "../icon/Logo.svg";
 import './LoginForm.css'
-import {ReactComponent as ButtonLogin} from "../icon/buttonLogin.svg"
-import { ReactComponent as VisIcon } from "./icon/IconPassword.svg";
+import {ReactComponent as ButtonLogin} from "../icon/buttonLogin.svg";
+import { ReactComponent as VisIcon } from "../icon/IconPassword.svg";
 
 
 export default function LoginForm() {
