@@ -1,26 +1,29 @@
 .ModalWindow {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  
-  .ModalWindow_substrate {
-    width: 100%;
-    height: 100%;
-    background: #f5f8ff;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .ModalWindow_wrapContent {
-    background-color: blue;
-    padding: 20px;
-    position: relative;
-    border-radius: 8px;
-  }
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.ModalWindow_substrate {
+  width: 100%;
+  height: 100%;
+  background: #f5f8ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ModalWindow_wrapContent {
+  background-color: #0072FF;
+  position: relative;
+  padding: 150px 288px 35px;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,18 @@
+.ResetPass_nameComp{
+    font-size: 48px;
+    position: absolute;
+    top: 48px;
+    color: white;
+}
+.ResetPass_BaseInput{
+margin-top: 24px;
+width: 424px;
+}
+.ResetPass_button{
+    width: 424px;
+    margin-top: 58px;
+}
+
+.ResetPass_logo{
+    margin-top: 52px;
+}
