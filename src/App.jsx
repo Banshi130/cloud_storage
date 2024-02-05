@@ -8,12 +8,11 @@ import LoginForm from './components/LoginForm';
 
 function App() {
   return (
-    <div className="App">
-      <div className='check'>  
+    <div className="App">   
+      <div className='check'> 
           <ModalWindow>
           <LoginForm /> 
-          </ModalWindow> 
-                     
+          </ModalWindow>                      
       </div>
     </div>
   );

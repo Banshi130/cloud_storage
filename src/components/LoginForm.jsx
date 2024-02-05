@@ -5,7 +5,7 @@ import BaseButton from "./BaseButton"
 import { ReactComponent as Logo } from "../icon/Logo.svg";
 import './LoginForm.css'
 import {ReactComponent as ButtonLogin} from "../icon/buttonLogin.svg"
-import { ReactComponent as VisIcon } from "./icon/IconPassword.svg";
+import { ReactComponent as VisIcon } from "../icon/IconPassword.svg";
 
 
 export default function LoginForm() {
@@ -13,11 +13,11 @@ export default function LoginForm() {
         <div className="LoginForm">
             <ModalWindow>
             <div className="LoginForm_name">Облачное хранилище ТН</div>
-                <BaseInput className="LoginForm_input" placeholder="@reliab.tech"/>
-                <BaseInput className="LoginForm_input" placeholder="Пароль" SufixIcon="VisIcon"/>            
+                <BaseInput className="LoginForm_input" type="email" placeholder="@reliab.tech"/>
+                <BaseInput className="LoginForm_input" type="Password" placeholder="Пароль" SufixIcon={VisIcon}/>            
             <div className="LoginForm_support">
-                <BaseButton >Регистрация</BaseButton>
-                <BaseButton >Забыли пароль?</BaseButton>                
+                <BaseButton href="#">Регистрация</BaseButton>
+                <BaseButton href="#">Забыли пароль?</BaseButton>                
             </div>  
             <div className="LoginForm_bittonLogIn">
                 <BaseButton><ButtonLogin/></BaseButton>
