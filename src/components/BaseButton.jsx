@@ -5,7 +5,7 @@ import cn from 'classnames';
 export default function (props) {
   return (
     <button
-      type={props.type}
+      type={props.type || "button"}
       onClick={(e) => props.onClick && props.onClick(e)} // Обрабатываем событие нажатия
       className={cn(
         'BaseButton',

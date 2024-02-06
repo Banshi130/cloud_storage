@@ -21,7 +21,7 @@
 .ModalWindow_wrapContent {
     background-color: #0072FF;
     position: relative;
-    padding: 150px 288px 35px;
+    padding: 16px;
     border-radius: 11px;
     display: flex;
     flex-direction: column;
