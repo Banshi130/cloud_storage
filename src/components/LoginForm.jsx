@@ -13,7 +13,7 @@ export default function LoginForm() {
         <div className="LoginForm">
             <ModalWindow>
             <div className="LoginForm_name">Облачное хранилище ТН</div>
-                <BaseInput className="LoginForm_input" placeholder="@reliab.tech"/>
+                <BaseInput className="LoginForm_input" type="email" placeholder="@reliab.tech"/>
                 <BaseInput className="LoginForm_input" type="password" placeholder="Пароль" SufixIcon={VisIcon}/>            
             <div className="LoginForm_support">
                 <BaseButton >Регистрация</BaseButton>
