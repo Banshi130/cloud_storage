@@ -1,8 +1,8 @@
 import BaseInput from './components/BaseInput/index';
-import ModalWindow from './components/ModalWindow/index';
+import { ModalWindow } from './components/ModalWindow/index';
 import { ReactComponent as VisIcon } from "./icon/IconPassword.svg";
 import { ReactComponent as HintIcon } from "./icon/IconHint.svg";
-import LoginForm from './pages/Login/index.js';
+import { LoginForm } from './pages/Login/index.js';
 
 
 

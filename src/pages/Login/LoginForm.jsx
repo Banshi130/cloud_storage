@@ -1,11 +1,11 @@
 import React from 'react'
-import ModalWindow from '../../components/ModalWindow/index'
-import BaseInput from '../../components/BaseInput/index'
-import BaseButton from '/Users/jemho/Documents/html/cloud/cloud_storage/src/components/BaseButton/index'
-import { ReactComponent as Logo } from '../icon/Logo.svg'
+import { ModalWindow } from '../../components/ModalWindow/index'
+import { BaseInput } from '../../components/BaseInput/index'
+import { BaseButton } from '../../components/BaseButton/index'
+import { ReactComponent as Logo } from '../../icon/Logo.svg'
 import './styles.css'
-import { ReactComponent as ButtonLogin } from '../icon/buttonLogin.svg'
-import { ReactComponent as VisIcon } from '../icon/IconPassword.svg'
+import { ReactComponent as ButtonLogin } from '../../icon/buttonLogin.svg'
+import { ReactComponent as VisIcon } from '../../icon/IconPassword.svg'
 
 export const LoginForm = () => {
   return (
