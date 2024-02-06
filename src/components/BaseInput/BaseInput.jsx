@@ -1,9 +1,9 @@
 //общее окно инпута 
 import React from "react";
-import './BaseInput.css'
+import './styles.css'
+import cn from "classnames";
 
-import cn from "classnames"; 
-export default (props)=>{
+export const BaseInput =  (props) => {
 const SufixIcon =props.SufixIcon;
 const HintIcon =props.HintIcon;
 
@@ -19,18 +19,3 @@ return(
 {/* // вннешняя иконка которая за инпутом. */}
 </div>)
 }
-//label : string
-//SufixIcon component
-//HintIcon component
-//value : string
-//placeholder  : string
-//type : string
-//name : string
-//onInput : function
-//onBlur  : function
-//isError : bolean 
-//helperText : string
-//className :string {на реакт компонент ннельзя навесить более одного класса нннужнна библа class names}
-
-
-/// MB  нужен тайп скрипт на прожкт нужно погуглить как добавить и что вообще.

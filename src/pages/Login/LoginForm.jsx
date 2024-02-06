@@ -1,13 +1,13 @@
 import React from 'react'
-import ModalWindow from './ModalWindow'
-import BaseInput from './BaseInput'
-import BaseButton from './BaseButton'
+import ModalWindow from '../../components/ModalWindow/index'
+import BaseInput from '../../components/BaseInput/index'
+import BaseButton from '/Users/jemho/Documents/html/cloud/cloud_storage/src/components/BaseButton/index'
 import { ReactComponent as Logo } from '../icon/Logo.svg'
-import './LoginForm.css'
+import './styles.css'
 import { ReactComponent as ButtonLogin } from '../icon/buttonLogin.svg'
 import { ReactComponent as VisIcon } from '../icon/IconPassword.svg'
 
-export default function LoginForm() {
+export const LoginForm = () => {
   return (
     <div className="LoginForm">
       <ModalWindow classNameContent="LoginForm_modalContent">

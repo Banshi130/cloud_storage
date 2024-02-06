@@ -1,8 +1,8 @@
 import React from 'react';
-import './BaseButton.css';
+import './styles.css';
 import cn from 'classnames';
 
-export default function (props) {
+export const BaseButton = (props) => {
   return (
     <button
       type={props.type || "button"}

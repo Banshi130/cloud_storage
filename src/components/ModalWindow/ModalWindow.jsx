@@ -1,9 +1,8 @@
 import React from 'react'
-import './ModalWindow.css'
-// import BaseInput from './BaseInput'
+import './styles.css'
 import cn from 'classnames' 
 
-export default (props) => {
+export const ModalWindow = (props) => {
   return (
     <div className="ModalWindow">
       <div className="ModalWindow_substrate"></div>
