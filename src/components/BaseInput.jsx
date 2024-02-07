@@ -1,11 +1,22 @@
 //общее окно инпута 
-import React from "react";
+import React, { useState } from "react";
 import './BaseInput.css'
-
+import { useReducer } from 'react';
 import cn from "classnames"; 
+
 export default (props)=>{
+const [vis, setVis]= useState()
+const CurrentType = props.type
 const SufixComponent =props.SufixComponent;
 const HintIcon =props.HintIcon;
+// const [type, setType]= useState(props.type)
+
+
+const visablePass = async () =>{
+    setVis('text')
+}
+  
+
 
 return(
     <div className={cn("BaseInput",props.className)}>
@@ -15,8 +26,9 @@ return(
         <input  onInput={(e)=>{props.onInput&&props.onInput(e)}} 
         onBlur={(e)=>{props.onBlur&&props.onBlur(e)}} 
          value={props.value} name={props.name}
-        type={props.type} className="BaseInput_input"  placeholder={props.placeholder}/>
-       {SufixComponent&& <SufixComponent className="BaseInput_SufixComponent"/>}
+        type={CurrentType} className="BaseInput_input"  placeholder={props.placeholder}/>
+       {SufixComponent&& <button onClick={visablePass}>
+        <SufixComponent className="BaseInput_SufixComponent"/></button>}
         {HintIcon&& <HintIcon className="BaseInput_OuterIcon"/>}
         {/* //здесь должна быть иконнка визуально нутри инпута */}
     </div>
