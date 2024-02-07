@@ -4,7 +4,7 @@ import './BaseInput.css'
 
 import cn from "classnames"; 
 export default (props)=>{
-const SufixIcon =props.SufixIcon;
+const SufixComponent =props.SufixComponent;
 const HintIcon =props.HintIcon;
 
 return(
@@ -12,8 +12,11 @@ return(
         
    {props.label && <label  className="BaseInput_label">{props.label}</label>}
    <div className="BaseInput_wrapInput"> 
-        <input  onInput={(e)=>{props.onInput&&props.onInput(e)}} onBlur={(e)=>{props.onBlur&&props.onBlur(e)}}  value={props.value} name={props.name} type={props.type} className="BaseInput_input"  placeholder={props.placeholder}/>
-       {SufixIcon&& <SufixIcon className="BaseInput_SufixIcon"/>}
+        <input  onInput={(e)=>{props.onInput&&props.onInput(e)}} 
+        onBlur={(e)=>{props.onBlur&&props.onBlur(e)}} 
+         value={props.value} name={props.name}
+        type={props.type} className="BaseInput_input"  placeholder={props.placeholder}/>
+       {SufixComponent&& <SufixComponent className="BaseInput_SufixComponent"/>}
         {HintIcon&& <HintIcon className="BaseInput_OuterIcon"/>}
         {/* //здесь должна быть иконнка визуально нутри инпута */}
     </div>

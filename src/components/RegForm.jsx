@@ -17,14 +17,20 @@ return(
 
 
 <div   className="RegForm">
-  <ModalWindow>
-    <div className="RegForm_Name">Регистрация</div>
-    <BaseInput label="Фамилия"/>
-    <BaseInput label="Имя"/>
-    <BaseInput label="Пароль"   SufixIcon={VisIcon } HintIcon={HintIcon} type="Password"/>
-    <BaseInput label="E-mail (Корпаротивный)" place placeholder="@reliab.tech" />
-    <BaseButton typeStyle ='dark' className="RegForm_ButtonSetting">Регистрация</BaseButton> 
-    <Logo className="RegForm_currentMargin"/>
+  <ModalWindow classNameContent='RegForm__modalContent'>
+    <form className="RegForm__form">
+    <h1 className="RegForm__title">Регистрация</h1>
+    <div className="RegForm__innerWrapForm">
+      <BaseInput label="Фамилия"/>
+      <BaseInput label="Имя"/>
+      <BaseInput label="Пароль"   SufixComponent={VisIcon } HintIcon={HintIcon} type="Password"/>
+      <BaseInput label="E-mail (Корпоративный)" place placeholder="example@reliab.tech" />
+      <BaseButton typeStyle ='dark' className="RegForm_ButtonSetting">Регистрация</BaseButton> 
+    </div>
+    <a href="">
+      <Logo className="RegForm_currentMargin"/>
+    </a>
+    </form>
   </ModalWindow>
 </div>
 

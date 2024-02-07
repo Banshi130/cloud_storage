@@ -11,7 +11,7 @@ function App() {
  
       </div>
 
-      
+      <RegForm/>
     </div>
   );
 }

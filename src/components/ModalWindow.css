@@ -1,12 +1,12 @@
 .ModalWindow {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   }
   
   .ModalWindow_substrate {
@@ -21,7 +21,8 @@
   .ModalWindow_wrapContent {
     background-color: #0072FF;
     position: relative;
-    padding: 150px 288px 35px;
+    box-sizing: border-box;
+    padding: 36px;
     border-radius: 11px;
     display: flex;
     flex-direction: column;
