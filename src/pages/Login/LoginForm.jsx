@@ -20,9 +20,10 @@ export const LoginForm = () => {
               placeholder="example@reliab.tech" />
             <BaseInput
               className="LoginForm_input"
-              type={[ 'password' , 'text' ]}
+              type= "password"
               placeholder="Пароль"
-              SufixIcon={"password"}
+              // SufixIcon={<BaseButton type="button"/>}
+              SufixComponent={"text"}
             />
             <div className="LoginForm_support">
               <BaseButton href="#">Регистрация</BaseButton>

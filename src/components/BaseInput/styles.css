@@ -23,14 +23,15 @@
       
 }
 
-.BaseInput_SufixIcon{
+.BaseInput_SufixComponent{
     position: absolute;
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
     color: #8B8C8E;
     width: 24px;
-    height: 24px;   
+    height: 24px;
+    cursor: pointer;   
 }
 
 .BaseInput_input::placeholder{

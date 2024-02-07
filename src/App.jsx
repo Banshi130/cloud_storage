@@ -11,9 +11,7 @@ function App() {
       <div className='check'>  
           <ModalWindow>
           <LoginForm />
-          </ModalWindow>
-           
-                     
+          </ModalWindow>                     
       </div>
     </div>
   );

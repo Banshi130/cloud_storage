@@ -4,7 +4,7 @@ import { ModalWindow } from '../../components/ModalWindow/index';
 import { BaseInput } from '../../components/BaseInput/index';
 import { BaseButton } from '../../components/BaseButton/index';
 import {ReactComponent as Logo} from '../../icon/Logo.svg'
-import {ReactComponent as SufixIcon} from '../../icon/IconPassword.svg'
+import {ReactComponent as SufixComponent} from '../../icon/IconPassword.svg'
 import { ReactComponent as HintIcon } from "../../icon/IconHint.svg";
 
 
@@ -21,12 +21,14 @@ export const ResetPass = () => {
                     <BaseInput 
                     className='ResetPass_input' 
                     placeholder='Новый пароль'
-                    HintIcon={HintIcon} 
-                    SufixIcon={SufixIcon}/>
+                    HintIcon={HintIcon}
+                    type="password" 
+                    SufixComponent={"text"}/>
                     <BaseInput 
                     className='ResetPass_input' 
                     placeholder='Подтвердите пароль' 
-                    SufixIcon={SufixIcon}/>  
+                    type="password" 
+                    SufixComponent={"text"}/>  
                 </div>
                     <BaseButton  
                         typeStyle='dark' 
