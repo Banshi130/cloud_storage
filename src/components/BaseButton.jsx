@@ -4,7 +4,7 @@ import cn from 'classnames'
 
 export default (props) => {
   return (
-    <button type={props.type} 
+    <button type="button"
     onClick={(e) => props.onClick && props.onClick(e)} // Обрабатываем событие нажатия
     className={cn('BaseButton', 
     props.typeStyle === 'dark' ? 'BaseButton--dark' : 'BaseButton--default', // Получаем стиль кнопки

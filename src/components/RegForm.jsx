@@ -2,6 +2,7 @@ import React from "react";
 import ModalWindow from "./ModalWindow";
 import BaseInput from "./BaseInput";
 import BaseButton from "./BaseButton"
+import { ReactComponent as HideIcon } from "../icon/IconPassword.svg";
 import { ReactComponent as VisIcon } from "../icon/IconPassword.svg";
 import { ReactComponent as HintIcon } from "../icon/IconHint.svg";
 import { ReactComponent as Logo } from "../icon/Logo.svg";
@@ -23,7 +24,7 @@ return(
     <div className="RegForm__innerWrapForm">
       <BaseInput label="Фамилия"/>
       <BaseInput label="Имя"/>
-      <BaseInput label="Пароль"   SufixComponent={VisIcon } HintIcon={HintIcon} type="Password"/>
+      <BaseInput label="Пароль"   SufixComponent={<BaseButton type="button"/>} HintIcon={HintIcon} type="password"/>
       <BaseInput label="E-mail (Корпоративный)" place placeholder="example@reliab.tech" />
       <BaseButton typeStyle ='dark' className="RegForm_ButtonSetting">Регистрация</BaseButton> 
     </div>
