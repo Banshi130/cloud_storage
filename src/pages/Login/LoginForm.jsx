@@ -4,8 +4,9 @@ import { BaseInput } from '../../components/BaseInput/index'
 import { BaseButton } from '../../components/BaseButton/index'
 import { ReactComponent as Logo } from '../../icon/Logo.svg'
 import './styles.css'
-import { ReactComponent as ButtonLogin } from '../../icon/buttonLogin.svg'
+import { ReactComponent as IconLogin } from '../../icon/IconLogin.svg'
 import { ReactComponent as VisIcon } from '../../icon/IconPassword.svg'
+
 
 export const LoginForm = () => {
   return (
@@ -17,7 +18,7 @@ export const LoginForm = () => {
             <BaseInput className="LoginForm_input" type="email" placeholder="@reliab.tech" />
             <BaseInput
               className="LoginForm_input"
-              type="Password"
+              type="password"
               placeholder="Пароль"
               SufixIcon={VisIcon}
             />
@@ -26,7 +27,7 @@ export const LoginForm = () => {
               <BaseButton href="#">Забыли пароль?</BaseButton>
             </div>
             <BaseButton>
-              <ButtonLogin />
+              <IconLogin />
             </BaseButton>
           </div>
           <a
