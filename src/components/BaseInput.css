@@ -11,6 +11,7 @@ display: block;
     padding: 16px;
     padding-right: 48px;
     position: relative;
+    border:none;
 }
 .BaseInput_input{
     font-size: 20px;
