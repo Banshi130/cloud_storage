@@ -1,11 +1,12 @@
 import React from 'react'
-import './ModalWindow.css'
-// import BaseInput from './BaseInput'
-export default (props) => {
+import './styles.css'
+import cn from 'classnames' 
+
+export const ModalWindow = (props) => {
   return (
     <div className="ModalWindow">
       <div className="ModalWindow_substrate"></div>
-      <div className="ModalWindow_wrapContent">
+      <div className={cn("ModalWindow_wrapContent", props.classNameContent)}>
         {props.children}
         {/* <BaseInput /> */}
       </div>

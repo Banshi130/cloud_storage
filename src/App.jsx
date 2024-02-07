@@ -1,23 +1,20 @@
-import BaseInput from './components/BaseInput';
-import ModalWindow from './components/ModalWindow'
-import { ReactComponent as VisIcon } from "./icon/IconPassword.svg";
-// import { ReactComponent as HintIcon } from "../icon/IconHint.svg";
-import Example from './components/Example'
+import { ModalWindow } from './components/ModalWindow/index';
+import { LoginForm } from './pages/Login/index';
+import { RegForm } from './pages/RegistrationForm/index'
+import { ResetPass } from './pages/ResetPassword/index'
+import { Route, Routes } from "react-router-dom"
+
+
+
+
 function App() {
   return (
     <div className="App">
-      <div className='check'>  
-          <ModalWindow>
-          <BaseInput onInput={(e)=>{console.log(e, "onInput")}}
-        onBlur={(e)=>{console.log(e, "onBlur")}} 
-         SufixIcon={VisIcon}
-      />
-          </ModalWindow>
-          
-          
-          </div>
-
-      
+      <Routes>
+      <Route path="/" element={<LoginForm />} />
+      <Route path="/registration" element={<RegForm />} />
+      <Route path="/resetpass" element={<ResetPass />} />
+    </Routes>                  
     </div>
   );
 }

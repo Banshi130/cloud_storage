@@ -1,0 +1,47 @@
+.RegForm__modalContent{
+    max-width: 1000px;
+    width: 100%;
+}
+.RegForm__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.RegForm__title{
+    font-weight: 400;
+    margin:0px ;
+    font-size: 48px;
+    margin-top: 12px;
+    color: white;
+}
+
+
+.RegForm__innerWrapForm{
+    display: flex;
+    align-items: center;
+    width: 424px;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.RegForm_ButtonSetting{
+   width: 100%;
+   margin-top: 56px;
+}
+
+.BaseInput{
+    width: 424px;
+    margin-top: 24px;
+}
+
+.BaseInput::first-line{
+    color:  white;
+}
+
+
+.LoginForm_link {
+    display: block;
+    cursor: pointer;
+    width: fit-content;
+}
