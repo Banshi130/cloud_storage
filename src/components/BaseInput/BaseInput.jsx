@@ -21,7 +21,7 @@ export const BaseInput =  (props) => {
             onInput={(e)=>{props.onInput&&props.onInput(e)}} 
             onBlur={(e)=>{props.onBlur&&props.onBlur(e)}}  
             value={props.value} 
-            name={props.name} 
+            name={props.name}
             type={type ? 'text' : 'password'} 
             className="BaseInput_input"  
             placeholder={props.placeholder}
