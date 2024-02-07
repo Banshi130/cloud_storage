@@ -15,7 +15,7 @@ export const LoginForm = () => {
           <h1 className="LoginForm_title">Облачное хранилище ТН</h1>
           <div className="LoginForm_innerWrapForm">
             <BaseInput 
-              className="LoginForm_input" 
+              className="LoginForm_input__email" 
               type="email" 
               placeholder="example@reliab.tech" />
             <BaseInput

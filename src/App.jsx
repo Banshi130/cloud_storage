@@ -10,8 +10,7 @@ function App() {
     <div className="App">
       <div className='check'>  
           <ModalWindow>
-          <LoginForm /> 
-          <RegForm />
+          <LoginForm />
           </ModalWindow>
            
                      
