@@ -13,6 +13,7 @@ display: block;
     position: relative;
     width: 100%;
     box-sizing: border-box;
+    border:none;
 }
 .BaseInput_input{
     font-size: 20px;
