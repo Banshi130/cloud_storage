@@ -5,7 +5,6 @@ import { BaseButton } from '../../components/BaseButton/index'
 import { ReactComponent as Logo } from '../../icon/Logo.svg'
 import './styles.css'
 import { ReactComponent as IconLogin } from '../../icon/IconLogin.svg'
-import { ReactComponent as VisIcon } from '../../icon/IconPassword.svg'
 
 
 export const LoginForm = () => {
@@ -18,9 +17,9 @@ export const LoginForm = () => {
             <BaseInput className="LoginForm_input" type="email" placeholder="@reliab.tech" />
             <BaseInput
               className="LoginForm_input"
-              type="password"
+              type={[ 'text', 'password' ]}
               placeholder="Пароль"
-              SufixIcon={VisIcon}
+              SufixIcon={'password'}
             />
             <div className="LoginForm_support">
               <BaseButton href="#">Регистрация</BaseButton>
