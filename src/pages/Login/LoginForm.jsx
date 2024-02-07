@@ -14,12 +14,15 @@ export const LoginForm = () => {
         <form className="LoginForm_form">
           <h1 className="LoginForm_title">Облачное хранилище ТН</h1>
           <div className="LoginForm_innerWrapForm">
-            <BaseInput className="LoginForm_input" type="email" placeholder="@reliab.tech" />
+            <BaseInput 
+              className="LoginForm_input" 
+              type="email" 
+              placeholder="example@reliab.tech" />
             <BaseInput
               className="LoginForm_input"
-              type={[ 'text', 'password' ]}
+              type={[ 'password' , 'text' ]}
               placeholder="Пароль"
-              SufixIcon={'password'}
+              SufixIcon={"password"}
             />
             <div className="LoginForm_support">
               <BaseButton href="#">Регистрация</BaseButton>

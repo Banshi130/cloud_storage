@@ -1,0 +1,66 @@
+.ResetPass {
+    color: white;
+}
+
+.ResetPass_modalContent {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.ResetPass_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+}
+
+.ResetPass_title {
+    font-size: 64px;
+    margin: 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+.ResetPass_innerWrapForm {
+    display: flex;
+    align-items: center;
+    width: 424px;
+    flex-direction: column;
+}
+
+.ResetPass_input {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.ResetPass_input:last-child {
+    margin-bottom: 8px;
+}
+
+.ResetPass_button {
+    width: 424px;
+}
+
+.ResetForm_link {
+    display: block;
+    cursor: pointer;
+    width: fit-content;
+}
+/* .ResetPass_nameComp{
+    font-size: 48px;
+    position: absolute;
+    top: 48px;
+    color: white;
+}
+.ResetPass_BaseInput{
+margin-top: 24px;
+width: 424px;
+}
+.ResetPass_button{
+    width: 424px;
+    margin-top: 58px;
+}
+
+.ResetPass_logo{
+    margin-top: 52px;
+} */

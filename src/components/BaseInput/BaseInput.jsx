@@ -31,7 +31,7 @@ export const BaseInput =  (props) => {
                 {type ? <HideIcon alt="Показать пароль"/> : <VisIcon alt="Скрыть пароль"/> 
                 } 
             </SufixIcon>}
-            {HintIcon&& <HintIcon onClick={setNextType} className="BaseInput_OuterIcon"/>}
+            {HintIcon&& <HintIcon className="BaseInput_OuterIcon"/>}
             {/* //здесь должна быть иконнка визуально нутри инпута */}
         </div>
     {/* // вннешняя иконка которая за инпутом. */}
