@@ -3,8 +3,9 @@ import './styles.css'
 import { ModalWindow } from '../../components/ModalWindow/index';
 import { BaseInput } from '../../components/BaseInput/index';
 import { BaseButton } from '../../components/BaseButton/index';
-import {ReactComponent as Logo} from '../../icon/Logo.svg'
-import {ReactComponent as SufixComponent} from '../../icon/IconPassword.svg'
+import { ReactComponent as Logo} from '../../icon/Logo.svg'
+// eslint-disable-next-line
+import { ReactComponent as SufixComponent} from '../../icon/IconPassword.svg'
 import { ReactComponent as HintIcon } from "../../icon/IconHint.svg";
 
 

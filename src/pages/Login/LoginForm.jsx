@@ -5,7 +5,7 @@ import { BaseButton } from '../../components/BaseButton/index'
 import { ReactComponent as Logo } from '../../icon/Logo.svg'
 import './styles.css'
 import { ReactComponent as IconLogin } from '../../icon/IconLogin.svg'
-
+import { Link } from "react-router-dom"
 
 export const LoginForm = () => {
   return (
@@ -22,12 +22,11 @@ export const LoginForm = () => {
               className="LoginForm_input"
               type= "password"
               placeholder="Пароль"
-              // SufixIcon={<BaseButton type="button"/>}
               SufixComponent={"text"}
             />
             <div className="LoginForm_support">
-              <BaseButton href="#">Регистрация</BaseButton>
-              <BaseButton href="#">Забыли пароль?</BaseButton>
+              <BaseButton><Link to="/registration" className='LoginForm_link'>Регистрация</Link></BaseButton>
+              <BaseButton><Link to="/resetpass" className='LoginForm_link'>Забыли пароль?</Link></BaseButton>
             </div>
             <BaseButton>
               <IconLogin />
@@ -44,5 +43,6 @@ export const LoginForm = () => {
         </form>
       </ModalWindow>
     </div>
+    
   )
 }
