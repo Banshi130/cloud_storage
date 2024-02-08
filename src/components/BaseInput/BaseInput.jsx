@@ -12,6 +12,13 @@ export const BaseInput =  (props) => {
     const HintIcon =props.HintIcon;
     const [ vis, setVis ] = useState(true);
     const [ type, setType ] = useState(props.type);
+   
+   
+   
+
+ 
+
+   
     const visablePass  =() => {
         setVis(!vis)
         if(vis === false) {
@@ -20,14 +27,7 @@ export const BaseInput =  (props) => {
             setType("text")
         }
     }
-    // const [ type, setType ] = useState(false);
-    // const setNextType = () => {setType(!type);};
-    // type={type ? 'text' : 'password'} 
-    // {SufixIcon&& 
-    //     <SufixIcon onClick={setNextType} className="BaseInput_SufixIcon"> 
-    //         {type ? <HideIcon alt="Показать пароль"/> : <VisIcon alt="Скрыть пароль"/> 
-    //         } 
-    //     </SufixIcon>}
+ 
 
     return(
         <div className={cn("BaseInput",props.className)}>       
@@ -35,12 +35,16 @@ export const BaseInput =  (props) => {
             <div className="BaseInput_wrapInput"> 
             <input  
             onInput={(e)=>{props.onInput&&props.onInput(e)}} 
-            onBlur={(e)=>{props.onBlur&&props.onBlur(e)}}  
+            onBlur={(e)=>{props.onBlur&&props.onBlur(e)}} 
+            {...props.required} 
             value={props.value} 
             name={props.name}
             type={type} 
             className="BaseInput_input"  
             placeholder={props.placeholder}
+            pattern={props.pattern}
+            
+           
             />
             {SufixComponent&& 
                 <SufixComponent onClick={visablePass} className="BaseInput_SufixComponent">    
