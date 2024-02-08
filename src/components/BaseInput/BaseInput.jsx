@@ -2,9 +2,10 @@
 import React from "react";
 import './styles.css'
 import cn from "classnames";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ReactComponent as VisIcon } from '../../icon/IconPassword.svg'
 import { ReactComponent as HideIcon } from '../../icon/IconHidePassword.svg'
+import { Tooltip } from "antd";
 // import { BaseButton } from "../BaseButton";
 
 export const BaseInput =  (props) => {
@@ -28,6 +29,10 @@ export const BaseInput =  (props) => {
     //         {type ? <HideIcon alt="Показать пароль"/> : <VisIcon alt="Скрыть пароль"/> 
     //         } 
     //     </SufixIcon>}
+    useEffect(() => {
+        document.documentElement.scrollTop = document.documentElement.clientHeight;
+        document.documentElement.scrollLeft = document.documentElement.clientWidth;
+    }, []);
 
     return(
         <div className={cn("BaseInput",props.className)}>       
@@ -47,7 +52,11 @@ export const BaseInput =  (props) => {
                 {vis ? <VisIcon/> : <HideIcon/>
                 } 
             </SufixComponent>}
-            {HintIcon&& <HintIcon className="BaseInput_OuterIcon"/>}
+            {HintIcon&& 
+                <Tooltip placement="bottom" 
+                title="Минимальная длина 8 символов, Максимальная длина 20 символов, Латиница, Без специальных символов (#, $, @)">
+                <HintIcon className="BaseInput_OuterIcon"/> 
+                </Tooltip>}
             {/* //здесь должна быть иконнка визуально нутри инпута */}
         </div>
     {/* // вннешняя иконка которая за инпутом. */}

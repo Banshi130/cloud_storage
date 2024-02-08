@@ -1,7 +1,11 @@
 .LoginForm {
     color: white;
   }
-  
+
+.ant-tooltip-open {
+  color: blue;
+}
+
 .LoginForm_modalContent {
     max-width: 1000px;
     width: 100%;
