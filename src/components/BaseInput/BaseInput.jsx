@@ -2,10 +2,10 @@
 import React from "react";
 import './styles.css'
 import cn from "classnames";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ReactComponent as VisIcon } from '../../icon/IconPassword.svg'
 import { ReactComponent as HideIcon } from '../../icon/IconHidePassword.svg'
-import { Tooltip } from "antd";
+import { Tooltip } from 'react-tooltip'
 // import { BaseButton } from "../BaseButton";
 
 export const BaseInput =  (props) => {
@@ -29,10 +29,6 @@ export const BaseInput =  (props) => {
     //         {type ? <HideIcon alt="Показать пароль"/> : <VisIcon alt="Скрыть пароль"/> 
     //         } 
     //     </SufixIcon>}
-    useEffect(() => {
-        document.documentElement.scrollTop = document.documentElement.clientHeight;
-        document.documentElement.scrollLeft = document.documentElement.clientWidth;
-    }, []);
 
     return(
         <div className={cn("BaseInput",props.className)}>       
@@ -53,10 +49,13 @@ export const BaseInput =  (props) => {
                 } 
             </SufixComponent>}
             {HintIcon&& 
-                <Tooltip placement="bottom" 
-                title="Минимальная длина 8 символов, Максимальная длина 20 символов, Латиница, Без специальных символов (#, $, @)">
-                <HintIcon className="BaseInput_OuterIcon"/> 
-                </Tooltip>}
+                <HintIcon 
+                data-tooltip-id="password"
+                data-tooltip-place="right" 
+                data-tooltip-html="Пароль должен содержать от 8 до 20 символов. <br /> Только латинские буквы. <br /> Использования символов (#, &, @) не допускается!" 
+                className="BaseInput_OuterIcon"/>
+            }
+            <Tooltip style={{width: "200px"}} id="password" className="prompt"/>
             {/* //здесь должна быть иконнка визуально нутри инпута */}
         </div>
     {/* // вннешняя иконка которая за инпутом. */}

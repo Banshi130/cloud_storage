@@ -2,7 +2,6 @@ import { LoginForm } from './pages/Login/index';
 import { RegForm } from './pages/RegistrationForm/index'
 import { ResetPass } from './pages/ResetPassword/index'
 import { Route, Routes } from "react-router-dom"
-import { Button } from 'antd';
 
 
 
