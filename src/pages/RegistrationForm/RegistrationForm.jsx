@@ -2,6 +2,7 @@ import React from "react";
 import { ModalWindow } from '../../components/ModalWindow/index';
 import { BaseInput } from '../../components/BaseInput/index';
 import { BaseButton } from '../../components/BaseButton/index';
+import { ReactComponent as SufixComponent} from '../../icon/IconPassword.svg'
 import { ReactComponent as VisIcon } from "../../icon/IconPassword.svg";
 import { ReactComponent as HintIcon } from "../../icon/IconHint.svg";
 import { ReactComponent as Logo } from "../../icon/Logo.svg";
@@ -19,7 +20,7 @@ return(
           <BaseInput label="Фамилия"/>
           <BaseInput label="Имя"/>
           <BaseInput label="Пароль"
-          SufixComponent={VisIcon } 
+          SufixComponent={"true"} 
           HintIcon={HintIcon} 
           type="Password"/>
           <BaseInput label="E-mail (Корпоративный)" 

@@ -22,7 +22,7 @@ export const LoginForm = () => {
               className="LoginForm_input"
               type= "password"
               placeholder="Пароль"
-              SufixComponent={"text"}
+              SufixComponent={"true"}
             />
             <div className="LoginForm_support">
               <BaseButton><Link to="/registration" className='LoginForm_link'>Регистрация</Link></BaseButton>

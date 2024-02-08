@@ -24,12 +24,12 @@ export const ResetPass = () => {
                     placeholder='Новый пароль'
                     HintIcon={HintIcon}
                     type="password" 
-                    SufixComponent={"text"}/>
+                    SufixComponent={"true"}/>
                     <BaseInput 
                     className='ResetPass_input' 
                     placeholder='Подтвердите пароль' 
                     type="password" 
-                    SufixComponent={"text"}/>  
+                    SufixComponent={"true"}/>  
                 </div>
                     <BaseButton  
                         typeStyle='dark' 
