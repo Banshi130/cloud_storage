@@ -9,23 +9,35 @@ import { ReactComponent as SufixComponent} from '../../icon/IconPassword.svg'
 import { ReactComponent as HintIcon } from "../../icon/IconHint.svg";
 import{PaswordInput} from "../../components/PasswordInput"
 
-export const ResetPass = () => {
 
+export const ResetPass = () => {
+    const passV={}
+    
     const[errorr, setEror]=useState({
         firstName: "",
         lastName: "",
         email: "",
         password: "",
+        repitepass:"",
         })
     
         const blure=(e)=>{
+            // let passV="не дошел"
           switch (e.target.name) {
+            
             case "Пароль":
               if(!e.target.value){setEror({...errorr, password: "Ошибка: Поле не должно быть пустым "}); return }
-              if( 8 >= e.target.value.length){setEror({...errorr, password: "Ошибка: Слишком короткий пароль "}) }
-              console.log(e.target.value.lenght);
+              if( 8 >= e.target.value.length){setEror({...errorr, password: "Ошибка: Слишком короткий пароль "}) } 
+  
+              passV.first=e.target.value
+
               break;
-        
+             case "Пароль2":
+                if(!e.target.value){setEror({...errorr, repitepass: "Ошибка: Поле не должно быть пустым "}); return }
+                if(passV.first !==e.target.value){setEror({...errorr, repitepass: "Ошибка: пароли не совпадают "})}else{setEror({...errorr, repitepass: ""})}
+                // console.log(passV);
+                
+            break;
             case "email":
               const mailregxp= /@[reliab.tech]/g
               if(!e.target.value){setEror({...errorr, email: "Ошибка: Поле не должно быть пустым "}); return }
@@ -57,13 +69,14 @@ export const ResetPass = () => {
                 case 'Пароль' :
                 setEror({...errorr, password: ""})
                 e.target.value = nextVal.replace(/[^A-Za-z\._\d-]+/g,"").slice(0, 20)
-        
-                console.log("знначение")
-                //somthing()
                 break
-    
+                case 'Пароль2' :
+                    setEror({...errorr, password: ""})
+                    e.target.value = nextVal.replace(/[^A-Za-z\._\d-]+/g,"").slice(0, 20)
+                    break
             }
          }
+         
     return(
         <div className="ResetPass">
             <ModalWindow classNameContent="ResetPass_modalContent">
@@ -83,10 +96,11 @@ export const ResetPass = () => {
                     type="password" 
                      onBlur={blure} err={errorr.password}  onInput={validate}/>
                     <PaswordInput 
+                    name="Пароль2"
                     className='ResetPass_input' 
                     placeholder='Подтвердите пароль' 
                     type="password" 
-                    onBlur={blure} err={errorr.password}  onInput={validate}/>  
+                    onBlur={blure} err={errorr.repitepass}  onInput={validate}/>  
                 </div>
                     <BaseButton  
                         typeStyle='dark' 
@@ -98,7 +112,8 @@ export const ResetPass = () => {
                     href="https://reliab.tech/"
                     target="_blank"
                     rel="noreferrer"
-                    > 
+                    
+                   > 
                         <Logo />
                 </a>
             </form>
