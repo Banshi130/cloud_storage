@@ -3,62 +3,56 @@ import React from "react";
 import './styles.css'
 import cn from "classnames";
 import { useState } from "react";
-import { ReactComponent as VisIcon } from '../../icon/IconPassword.svg'
-import { ReactComponent as HideIcon } from '../../icon/IconHidePassword.svg'
+
 // import { BaseButton } from "../BaseButton";
+import { forwardRef } from "react";
 
-export const BaseInput =  (props) => {
-    const SufixComponent =props.SufixComponent;
+
+export const BaseInput = forwardRef((props, ref) => {
+    
+
     const HintIcon =props.HintIcon;
-    const [ vis, setVis ] = useState(true);
-    const [ type, setType ] = useState(props.type);
-   
-   
-   
 
+    
+  
+   console.log(props.err)
+
+ 
  
 
    
-    const visablePass  =() => {
-        setVis(!vis)
-        if(vis === false) {
-            setType("password")
-        }else {
-            setType("text")
-        }
-    }
- 
+//props.isError
 
     return(
-        <div className={cn("BaseInput",props.className)}>       
+        <div className={cn("BaseInput",  props.className)}>
+                     
             {props.label && <label  className="BaseInput_label">{props.label}</label>}
-            <div className="BaseInput_wrapInput"> 
-            <input  
+            <div className={cn("BaseInput_wrapInput", props.err&& "BaseInput--error")}> 
+            <input 
+            ref={ref} 
             onInput={(e)=>{props.onInput&&props.onInput(e)}} 
             onBlur={(e)=>{props.onBlur&&props.onBlur(e)}} 
-            {...props.required} 
+            
             value={props.value} 
             name={props.name}
-            type={type} 
+            type={props.type} 
             className="BaseInput_input"  
             placeholder={props.placeholder}
-            pattern={props.pattern}
+            
             
            
             />
-            {SufixComponent&& 
-                <SufixComponent onClick={visablePass} className="BaseInput_SufixComponent">    
-                {vis ? <VisIcon/> : <HideIcon/>
-                } 
-            </SufixComponent>}
+                
+            <div className="BaseInput_SufixComponent">{props.SufixComponent}</div>
+
             {HintIcon&& <HintIcon className="BaseInput_OuterIcon"/>}
-            {/* //здесь должна быть иконнка визуально нутри инпута */}
+            {props.helperText&& <p>{props.helperText}</p>}
+            
         </div>
-    {/* // вннешняя иконка которая за инпутом. */}
+        {props.err && <p className="BaseInput_errortext"> {props.err} </p>} 
     </div>)
-    }
+    });
 
 
 
-// Рабочая версия инпута без обработчика скрытия пароля ->
-
+// Рабочая версия инпута без обработчика скрытия пароля ->  пропса из ерор и див с текстом

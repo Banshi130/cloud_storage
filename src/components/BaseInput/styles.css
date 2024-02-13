@@ -47,3 +47,12 @@ color: #6F6F6F;
     width: 24px;
     height: 24px;   
 }
+.BaseInput--error{
+    border: 2px solid red;
+
+}
+.BaseInput_errortext{
+   color: red;
+   margin-top: 4px;
+   margin-bottom: 4px;
+}

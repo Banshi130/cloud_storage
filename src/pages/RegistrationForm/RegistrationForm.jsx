@@ -5,58 +5,93 @@ import { BaseButton } from '../../components/BaseButton/index';
 import { ReactComponent as VisIcon } from "../../icon/IconPassword.svg";
 import { ReactComponent as HintIcon } from "../../icon/IconHint.svg";
 import { ReactComponent as Logo } from "../../icon/Logo.svg";
+import { useRef } from 'react';
+import{PaswordInput} from "../../components/PasswordInput"
 import './styles.css'
+import { switchCase } from "@babel/types";
+
 export const RegForm = () => {
+const[errorr, setEror]=useState({
+                                  firstName: "",
+                                  lastName: "",
+                                  email: "",
+                                  password: "",
+                                  })
 
 
 
+  const inputRef = useRef(null);
+  
 
+const blure=(e)=>{
+  const regexp = /^[А-Я]+[а-я\-*/'*]+[а-я]+$/g
+  switch (e.target.name) {
+    case "Имя":
+      // console.log(e.target.value);
+      if(!e.target.value){setEror({...errorr, firstName: "Ошибка: Поле не должно быть пустым "}); return }
+      if(regexp.test(e.target.value)){setEror({...errorr, firstName: ""})}else{setEror({...errorr, firstName: "Ошибка: Символ не может стоять в начале или конце слова "})}
+      // console.log(e.target.value.match(/(^[А-Я]+[а-я\-/']+[а-я]+$)/g));
+      break;
+    case "Фамилия":
+      if(!e.target.value){setEror({...errorr, lastName: "Ошибка: Поле не должно быть пустым "}); return }
+      if(regexp.test(e.target.value)){setEror({...errorr, lastName: ""})}else{setEror({...errorr, lastName: "Ошибка: Символ не может стоять в начале или конце слова "})}
+    break;
 
-  const [ check, setCheck ] = useState(true);
-  const checed = (e)=>{
-      switch(e.target.name){
-        case 'id1':
-        console.log("отработал");
-        break
-      }
-        
+    case "Пароль":
+      if(!e.target.value){setEror({...errorr, password: "Ошибка: Поле не должно быть пустым "}); return }
+      if( 8 >= e.target.value.length){setEror({...errorr, password: "Ошибка: Слишком короткий пароль "}) }
+      console.log(e.target.value.lenght);
+      break;
 
-
+    case "email":
+      const mailregxp= /@[reliab.tech]/g
+      if(!e.target.value){setEror({...errorr, email: "Ошибка: Поле не должно быть пустым "}); return }
+      console.log();
+      if(mailregxp.test(e.target.value)){setEror({...errorr, email: ""})}else{setEror({...errorr, email: "Ошибка: Используйте @reliab.tech"})}
+    break;  
   }
-  const valid = (e)=>{
+  
+}
+
+
+
+  
+  const validate = (e)=>{
+
+    let nextVal = e.target.value.trim()
+    if(!nextVal){
+      e.target.value= nextVal
+      return
+    }
+  
+
     switch(e.target.name){
         case 'email' : 
-          e.target.value = e.target.value.trim()
+        setEror({...errorr, email: ""})
+        e.target.value =  nextVal.replace(/([А-Яа-яЁё&=+<>,'&-])|(\.{2})/g, "")
         //somthing()
         break
-        case 'Пароль' : 
-        e.target.value = e.target.value.trim()
+        case 'Пароль' :
+        setEror({...errorr, password: ""})
+        e.target.value = nextVal.replace(/[^A-Za-z\._\d-]+/g,"").slice(0, 20)
+
         console.log("знначение")
         //somthing()
         break
         case 'Имя' : 
-        e.target.value = e.target.value.trim().replace(/[^А-Яа-яЁё]+/g, '')
-        //somthing()
+        setEror({...errorr, firstName: ""})
+        // .replace(/[^А-Яа-яЁё\-/']+/g, "" )
+        e.target.value= nextVal.toLowerCase() .replace(/[^-А-Яа-яЁё']+/g, "" ).replace(/(^)[А-Яа-яЁё]/, function(x){ return x.toUpperCase(); }).slice(0, 20)
+        
         break
         case 'Фамилия' : 
-        e.target.value = e.target.value.trim()
+        setEror({...errorr, lastName: ""})
+        e.target.value= nextVal.toLowerCase() .replace(/[^-А-Яа-яЁё']+/g, "" ).replace(/(^)[А-Яа-яЁё]/, function(x){ return x.toUpperCase(); }).slice(0, 20)
         //somthing()
         break
 
     }
  }
-
-  
-
-
-
-
-
-
-
-
-
-
 
 
 return(
@@ -65,14 +100,14 @@ return(
         <form name="Reg" className="RegForm__form">
         <h1 className="RegForm__title">Регистрация</h1>
         <div className="RegForm__innerWrapForm">
-          <BaseInput name="Фамилия" onInput={valid}  onBlur={checed} type='text'  label="Фамилия" required="required"/>
-          <BaseInput name="Имя"  type='text' label="Имя" required="required" onInput={valid} />
-          <BaseInput  name="Пароль" onInput={valid}  label="Пароль" placeholder="" 
-          SufixComponent={"true"} 
+          <BaseInput name="Фамилия" onInput={validate}   type='text'  label="Фамилия" required="required" onBlur={blure}  err={errorr.lastName} />
+          <BaseInput name="Имя"  type='text' label="Имя" required="required" onInput={validate} onBlur={blure} ref={inputRef} err={errorr.firstName}/>
+          <PaswordInput  name="Пароль"  label="Пароль" placeholder="" onBlur={blure} err={errorr.password}  onInput={validate}
+           
           HintIcon={HintIcon} 
           type="Password" required="required"/>
           <BaseInput name="email" type="email" label="E-mail (Корпоративный)" 
-          placeholder="example@reliab.tech" required="required" patern=".+@reliab\.tech" onInput={valid} />
+          placeholder="example@reliab.tech" required="required" patern=".+@reliab\.tech" onInput={validate} onBlur={blure} err={errorr.email} />
           <BaseButton type='submit' typeStyle ='dark' className="RegForm_ButtonSetting">Регистрация</BaseButton> 
         </div>
           <a
