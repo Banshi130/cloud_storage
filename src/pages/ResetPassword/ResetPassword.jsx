@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import './styles.css'
 import { ModalWindow } from '../../components/ModalWindow/index';
 import { BaseInput } from '../../components/BaseInput/index';
@@ -11,7 +11,10 @@ import{PaswordInput} from "../../components/PasswordInput"
 
 
 export const ResetPass = () => {
-    const passV={}
+    
+  
+  const pass1 =useRef()
+   
     
     const[errorr, setEror]=useState({
         firstName: "",
@@ -28,14 +31,14 @@ export const ResetPass = () => {
             case "Пароль":
               if(!e.target.value){setEror({...errorr, password: "Ошибка: Поле не должно быть пустым "}); return }
               if( 8 >= e.target.value.length){setEror({...errorr, password: "Ошибка: Слишком короткий пароль "}) } 
-  
-              passV.first=e.target.value
+              pass1.current=e.target.value
+              //passV.first=e.target.value
 
               break;
              case "Пароль2":
                 if(!e.target.value){setEror({...errorr, repitepass: "Ошибка: Поле не должно быть пустым "}); return }
-                if(passV.first !==e.target.value){setEror({...errorr, repitepass: "Ошибка: пароли не совпадают "})}else{setEror({...errorr, repitepass: ""})}
-                // console.log(passV);
+                if(pass1.current !==e.target.value){setEror({...errorr, repitepass: "Ошибка: пароли не совпадают "})}else{setEror({...errorr, repitepass: ""})}
+                 console.log(pass1.current);
                 
             break;
             case "email":
@@ -48,7 +51,7 @@ export const ResetPass = () => {
           
         }
         
-        
+
         
           
           const validate = (e)=>{

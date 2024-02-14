@@ -8,7 +8,7 @@ import { ReactComponent as Logo } from "../../icon/Logo.svg";
 import { useRef } from 'react';
 import{PaswordInput} from "../../components/PasswordInput"
 import './styles.css'
-import { switchCase } from "@babel/types";
+
 
 export const RegForm = () => {
 const[errorr, setEror]=useState({
@@ -17,8 +17,6 @@ const[errorr, setEror]=useState({
                                   email: "",
                                   password: "",
                                   })
-
-
 
   const inputRef = useRef(null);
   
@@ -96,7 +94,7 @@ const blure=(e)=>{
 
 return(
     <div   className="RegForm">
-      <ModalWindow classNameContent='RegForm__modalContent'>
+      <div className='RegForm__content'>
         <form name="Reg" className="RegForm__form">
         <h1 className="RegForm__title">Регистрация</h1>
         <div className="RegForm__innerWrapForm">
@@ -108,7 +106,7 @@ return(
           type="Password" required="required"/>
           <BaseInput name="email" type="email" label="E-mail (Корпоративный)" 
           placeholder="example@reliab.tech" required="required" patern=".+@reliab\.tech" onInput={validate} onBlur={blure} err={errorr.email} />
-          <BaseButton type='submit' typeStyle ='dark' className="RegForm_ButtonSetting">Регистрация</BaseButton> 
+          <BaseButton disable="" type='submit' typeStyle ='dark' className="RegForm_ButtonSetting">Регистрация</BaseButton> 
         </div>
           <a
             className="LoginForm_link"
@@ -119,7 +117,7 @@ return(
             <Logo />
           </a>
         </form>
-      </ModalWindow>
+      </div>
     </div>
 )
 }
